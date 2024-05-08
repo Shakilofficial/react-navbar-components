@@ -1,6 +1,6 @@
 import { useState } from "react";
-import { FiMenu } from "react-icons/fi";
 import { AiOutlineShoppingCart } from "react-icons/ai";
+import { FiMenu } from "react-icons/fi";
 import { IoCloseOutline } from "react-icons/io5";
 
 const NavigationBar = () => {
@@ -65,7 +65,7 @@ const NavigationBar = () => {
         <div
           className={`fixed h-full w-screen lg:hidden bg-black/50 backdrop-blur-sm top-0 right-0 ${
             isSideMenuOpen ? "translate-x-0" : "-translate-x-full"
-          } transition-all`}
+          } transition-all duration-500`}
         >
           <section className="bg-gradient-to-b from-purple-400 to-indigo-500 text-white flex-col absolute left-0 top-0 h-screen p-8 gap-8 z-50 w-56 flex">
             <IoCloseOutline
@@ -94,7 +94,7 @@ const NavigationBar = () => {
           />
         </section>
       </nav>
-      <hr className="border-gray-200" />
+      <hr className="border-b border-gray-200" />
     </main>
   );
 };
